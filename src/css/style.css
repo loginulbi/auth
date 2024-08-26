@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Ganti dengan URL gambar latar belakang */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: #004080;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.header-title p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-button, .logout-button {
+    background-color: #0066cc;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-button:hover, .logout-button:hover {
+    background-color: #005bb5;
+}
+
+.main-content {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.module-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.module-item {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.module-item:hover {
+    transform: scale(1.05);
+}
+
+.module-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.module-item p {
+    margin: 0;
+    font-size: 14px;
+}
