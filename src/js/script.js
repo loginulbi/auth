@@ -33,13 +33,14 @@ function handleRedirect(id) {
 }
 
 export function setCookieWithExpireHour(cname, cvalue, exhour) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exhour * 60 * 60 * 1000));
-  let expires = "expires=" + d.toUTCString();
+  const d = new Date(); // Get tanggal sekarang
+  d.setTime(d.getTime() + (exhour * 60 * 60 * 1000)); // Set waktu expired dalam jam
+  let expires = "expires=" + d.toUTCString(); // Konvert waktu expired ke UTC
   
   // Set domain to ulbi.ac.id to allow subdomains access
   let domain = "domain=.ulbi.ac.id"; 
 
+  // Set cookie dengan nama, value, expired, domain, dan path
   document.cookie = cname + "=" + cvalue + ";" + expires + ";" + domain + ";path=/";
   console.log(`Cookie set: ${cname}=${cvalue}; ${expires}; ${domain}; path=/`);
 }
