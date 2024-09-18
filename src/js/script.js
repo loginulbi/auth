@@ -4,19 +4,29 @@ import { redirect } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.4/url.js';
 onClick('HRIS', () => handleRedirect('HRIS'));
 
 function handleRedirect(id) {
-  let redirectUrl = '';
+  let redirectUrl;
 
-  // Buat kondisi untuk menetapkan cookie redirect sesuai dengan ID
-  if (id === 'HRIS') {
-    redirectUrl = 'https://euis.ulbi.ac.id/hris-dev/app/validasi-data.html';
-  } else {
-    // Anda bisa menambahkan kondisi lain jika ada ID tambahan
-    redirectUrl = window.location.href;  // Default ke halaman saat ini
+  // Gunakan switch-case untuk menetapkan URL redirect sesuai dengan ID
+  switch (id) {
+    // Jika ID adalah 'HRIS', maka redirect ke URL HRIS
+    case 'HRIS':
+      redirectUrl = 'https://euis.ulbi.ac.id/hris-dev/app/validasi-data.html';
+      break;
+
+    // Jika ID adalah 'SIMPELBI', maka redirect ke URL SIMPELBI
+    case 'simpelbiCard':
+      redirectUrl = 'https://euis.ulbi.ac.id/simpelbi';
+      break;
+
+    // Default redirect ke halaman saat ini
+    default:
+      redirectUrl = window.location.href;
+      break;
   }
 
   // Set cookie redirect berdasarkan ID yang dipilih
   setCookieWithExpireHour('redirect', redirectUrl, 1);
-  
+
   // Redirect ke halaman login
   redirect('https://login.ulbi.ac.id/');
 }
