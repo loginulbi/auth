@@ -3,6 +3,7 @@ import { redirect } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.4/url.js';
 
 onClick('HRIS', () => handleRedirect('HRIS'));
 onClick('simpelbiCard', () => handleRedirect('simpelbiCard'));
+onClick('helpdeskCard', () => handleRedirect('helpdeskCard'));
 
 function handleRedirect(id) {
   let redirectUrl;
