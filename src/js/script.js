@@ -19,6 +19,11 @@ function handleRedirect(id) {
       redirectUrl = 'https://euis.ulbi.ac.id/simpelbi';
       break;
 
+    // Jika ID adalah 'SIMPELBI', maka redirect ke URL SIMPELBI
+    case 'helpdeskCard':
+      redirectUrl = 'https://helpdesk.ulbi.ac.id/dashboard_helpdesk';
+      break;
+
     // Default redirect ke halaman saat ini
     default:
       redirectUrl = window.location.href;
